@@ -1,9 +1,10 @@
 from point import *
 
 class Plane:
-    counter = 1
+    counter = 0
 
     def __init__(self, a: float, b: float, c: float, d: float):
+        Plane.counter += 1
         self.id = Plane.counter
         self.name = None
         self.number_of_points = 0
@@ -11,7 +12,6 @@ class Plane:
         self.b = float(b)
         self.c = float(c)
         self.d = float(d)
-        Point.counter += 1
 
     def __str__(self):
         return f"Поверхность \"{self.name}\":\n" \
